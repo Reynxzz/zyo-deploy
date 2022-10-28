@@ -1,6 +1,6 @@
 import streamlit as st
 import nltk
-#nltk.download('popular')
+nltk.download('popular')
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import pickle
