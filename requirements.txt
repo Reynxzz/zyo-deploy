@@ -8,3 +8,4 @@ streamlit_authenticator==0.1.5
 tensorflow==2.9.1
 torch==1.12.1
 transformers==4.21.2
+openpyxl==3.0.10
