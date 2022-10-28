@@ -1,8 +1,8 @@
 import streamlit as st
 import nltk
-#nltk.download('popular')
-nltk.download('punkt')
-nltk.download('omw-1.4')
+nltk.download('popular')
+# nltk.download('punkt')
+# nltk.download('omw-1.4')
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import pickle
