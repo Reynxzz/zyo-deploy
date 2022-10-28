@@ -5,4 +5,4 @@ Zyo is an AI-based application that serves as a virtual tour guide for internati
 
 try it yourself : https://reynxzz-zyo-deploy-app-zd3wkm.streamlitapp.com/
 
-previous reository (elimination round): https://github.com/Reynxzz/zyo-virtual-tour-guide
+previous repository (elimination round): https://github.com/Reynxzz/zyo-virtual-tour-guide
