@@ -1,6 +1,8 @@
 import streamlit as st
 import nltk
-nltk.download('popular')
+#nltk.download('popular')
+nltk.download('punkt')
+nltk.download('omw-1.4')
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import pickle
@@ -286,7 +288,10 @@ def generative_model():
             st.session_state.chat_history_ids = model.generate(bot_input_ids, max_length=5000, pad_token_id=tokenizer.eos_token_id, temperature=0.6, repetition_penalty=1.3)
             response = tokenizer.decode(st.session_state.chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
             
-        st.write(f"Zyo: {response}")
+        st.success(f"Zyo: {response}")
+        st.write("")
+        st.write("")
+        st.write("")
         st.session_state.old_response = response
     except:
         pass
@@ -344,11 +349,12 @@ def getResponse(ints, intents_json):
                 break
             elif tag == 'just_talk':
                 generative_model()
-            elif tag == 'recomend_destination':
+            result = random.choice(i['responses'])
+            
+            if tag == 'recomend_destination':
                 recommend_destination()
                 result = ""
                 break
-            result = random.choice(i['responses'])
     return result
     
 def chatbot_response(msg):
