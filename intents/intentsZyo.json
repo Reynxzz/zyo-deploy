@@ -1,7 +1,17 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "Hello Zyo How are you", "How are you doing", "hai anyone here", "hi everyone", "what is happening", "what are you", "hello chatbot for explore indonesia", "nice to meet you", "glad to see you", "i need some help", "can you help me to explore indonesia", "what can you do", "is any bot here", "i want to talk with you", "can you help me right now"],
-         "responses": ["Hello! I'm Zyo :)", "Good to see you again!", "Hi there, how can I help you?"],
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "Hello Zyo How are you", "How are you doing", "hai anyone here", "hi everyone", "what is happening", "what are you", "hello chatbot for explore indonesia", "nice to meet you", "glad to see you", "i need some help", "can you help me to explore indonesia", "what can you do", "is any bot here", "i want to talk with you", "can you help me right now", "Good morning", "Good afternoon", "good evening", "good night", "what are you doing"],
+         "responses": ["Hello! I'm Zyo :) how are you?", "Good to see you again! I'm Zyo. I feel great today", "Hi there, how can I help you?"],
+         "context_set": ""
+        },
+        {"tag": "greeting_reply",
+         "patterns": ["i'm okay", "i am fine", "i'm good", "i feel great", "i feel happy today", "i'm feeling great today", "i feel amazing"],
+         "responses": ["Glad to hear that. how can I help you?"],
+         "context_set": ""
+        },
+        {"tag": "bali_faq",
+         "patterns": ["what is bali", "can you explain how is bali", "what happen in bali", "is bali good", "is bali amazing place to go", "i need to know more about bali", "please describe bali for me", "i don't know what is bali", "where is bali", "i hope you can tell what is bali"],
+         "responses": ["Bali is one of the most famous island in the Indonesian archipelago. The island's home to an ancient culture that's known for its warm hospitality. Bali's location is 4,555 km (2,830 miles) from Australia and is situated between Indonesia's islands of Lombok and Java."],
          "context_set": ""
         },
         {"tag": "goodbye",
@@ -17,6 +27,11 @@
         {"tag": "name",
          "patterns": ["what is your name", "what should I call you", "whats your name?", "i want to know your name", "do you mind if you tell me your name", "i hope i know your name", "i just want to know what is your name", "is your name zyo", "what is your bot name", "your name i need to know who you are", "whats your  nickname", "what should i call your name", "i know your name is good", "please tell me your name first", "i need to remember your name", "i dont remember your name, can you tell me again", "i dont know who you are", "you can can tell me your name so we can talk", "is everyone know your name", "so your name is", "what if i dont know your name"],
          "responses": ["You can call me Zyo", "I'm Zyo!", "I'm Zyo! Your Virtual Tour Guide!"],
+         "context_set": ""
+        },
+        {"tag": "feature",
+         "patterns": ["what can you do", "what help can you do", "what is your function", "what feature do you have", "do you mind if you tell me your abilities", "what is your ability", "i just want to know your abilities", "what are your abilities?", "what skills do you have", "do you have a skill", "how can you help me", "what talents do you possess?", "what capabilities do you have the?", "what attributes do you acquire?", "what characteristics do you own or have?", "what competences do you own or have?", "What expertise do you have?"],
+         "responses": ["I'm Zyo! I can guide you to explore Bali with amazing experience. Ask me FAQ, hotel/place recommendation, or just talking (please say: 'i just wanna talk' if you want to talk personally)"],
          "context_set": ""
         },
         {"tag": "weather_faq",
@@ -72,21 +87,41 @@
         {"tag": "whattoeat_faq",
          "patterns": ["What to eat in Bali?", "i want to eat delicious food in bali", "can you recommend me the best food in bali", "i dont know anything about bali food", "is any idea about delicious food in bali", "how is the recommended food there", "do you mind if you tell me the best food in bali", "i want you to recommend me the best food in bali", "i dont know what to eat, can you recommend me the recommended one", "i dont have any idea about the food that can satisfied my stomach", "i want to eat the best food that you have", "what happen if i dont anything about food in bali", "does bali have an authentic food", "i need to know every thing about recommended food, please suggest me", "i think the food is not good", "i really wanna know the bali food that have the best taste", "does food in bali taste delicious", "what kind of food i should try", "i wanto to try every food that bali have", "do you ever try any food in bali", "bali have a good taste in food"],
          "responses": ["When you are in Bali, you must try the authentic Balinese food as it is one of its kind and a lot of travelers visit Bali just to try the local delicacies. You must try dishes like Sate, Nasi Ayam, and Nasi Campur, Bebek and Ayam Betutu, Babi Guling and Traditional cakes and desserts."],
-         "context_set": "need a follow up question"
+         "context_set": ""
         },
-        {"tag": "bestressort_faq",
-         "patterns": ["Which are the best beach resorts in Bali?","i want to know what is the best resort in bali", "i dont have any information about best resort in bali", "what happen if i wanna book a resorts", "do you have any recommendation resorts", "what resorts i should visit to have best experience", "i want to traveling for 5 days, what resorts should i stay", "i need to stay for couple days, please recommend me a resort", "what resorts should i stay for a couple days", "bali resort is amazing to stay", "i need to stay in resorts for a couple days", "how do you know about the resort", "please give me an idea to stay in resort", "best choice to stay in resort", "i hope every resort in bali is good to rest", "which resort that worth it to stay", "sometimes i need to holiday in resort", "best resort for staycation", "can i staycation in the resort, which resort is the best for that", "can you give me a suggestion about any resort to staycation", "what should i do to find a best resort"],
-         "responses": ["If you are a beach lover and are planning to stay at a beach resort in Bali, then the best options for you are The Mulia, St.Regis Bali, The Royal Purnama and W Bali."],
-         "context_set": "need a follow up question"
+        {"tag": "whattoeathalal_faq",
+         "patterns": ["What to eat halal in Bali?", "i want to eat halal food in bali", "can you recommend me the best halal food in bali", "i dont know anything about bali halal food", "is any idea about delicious halal food in bali", "how is the recommended halal/moslem food there", "do you mind if you tell me the best moslem food in bali", "i want you to recommend me the best halal or moslem food in bali", "i dont know what to eat, can you recommend me the halal one", "i dont have any idea about the halal food that can satisfied my stomach", "i want to eat the best halal food that you have", "what happen if i dont anything about halal food in bali", "does bali have an halal food", "i need to know every thing about halal food, please suggest me", "i think the halal food is not good", "i really wanna know the bali food that have the best taste and moslem-friendly", "does halal food in bali taste delicious", "what kind of halal food i should try", "i wanto to try every halal food that bali have", "do you ever try any halal food in bali", "bali have a good taste in halal food"],
+         "responses": ["Mostly, the food is halal. You must try dishes like Sate, Nasi Ayam, and Nasi Campur, Bebek and Ayam Betutu, and Traditional cakes and desserts."],
+         "context_set": ""
         },
         {"tag": "besthotel_faq",
-         "patterns": ["Which are the best beach hotels in Bali?","i want to know what is the best hotel in bali", "i dont have any information about best hotel in bali", "what happen if i wanna book a hotels", "do you have any recommendation hotels", "what hotels i should visit to have best experience", "i want to traveling for 5 days, what hotels should i stay", "i need to stay for couple days, please recommend me a hotel", "what hotels should i stay for a couple days", "bali hotel is amazing to stay", "i need to stay in hotels for a couple days", "how do you know about the hotel", "please give me an idea to stay in hotel", "best choice to stay in hotel", "i hope every hotel in bali is good to rest", "which hotel that worth it to stay", "sometimes i need to holiday in hotel", "best hotel for staycation", "can i staycation in the hotel, which hotel is the best for that", "can you give me a suggestion about any hotel to staycation", "what should i do to find a best hotel"],
+         "patterns": ["Which are the best beach hotels in Bali?","i want to know what is the best hotel in bali", "i dont have any information about best hotel in bali", "what happen if i wanna book a hotels", "do you have any recommendation hotels", "what hotels i should visit to have best experience", "i want to traveling for 5 days, what hotels should i stay", "i need to stay for couple days, please recommend me a hotel", "what hotels should i stay for a couple days", "bali hotel is amazing to stay", "i need to stay in hotels for a couple days", "how do you know about the hotel", "please give me an idea to stay in hotel", "best choice to stay in hotel", "i hope every hotel in bali is good to rest", "which hotel that worth it to stay", "sometimes i need to holiday in hotel", "best hotel for staycation", "can i staycation in the hotel, which hotel is the best for that", "can you give me a suggestion about any hotel to staycation", "what should i do to find a best hotel", "where to stay", "what hotel to stay"],
          "responses": ["The best hotels in Seminyak are Horison Seminyak, The Haven Bali Seminyak, Courtyard by Marriott Bali Seminyak Resort and Harris Hotel Seminyak."],
          "context_set": "need a follow up question"
         },
         {"tag": "timevisit_faq",
          "patterns": ["When is the best time to go?", "can you recommend me the best time to go there", "what time is the best to go vacation", "what the best time to come", "what year is the best to come to bali", "is october the best month to go to bali", "can you recomend me the month that the best month to go there", "i want to go on between august or september, is that the best time to go", "what happen if i go in january", "i just want to go in the best time to go there", "i hope i go in the best time for vacation", "i supposed to go in july", "i better go in february", "i hope go in any month is good", "any month is perfect to have a vacation there", "i prefer to go in july, is it a good time", "i dont want to go in august or november", "can anybody go there in any month", "i have a plan to visit bali in march, is that the best time to go", "can you choose me the time to visit, february or march is the best time", "is it better to come in end of the year"],
          "responses": ["Bali is a spectacular destination to visit all year round with stunning tropical scenery and endless opportunities for adventure. While temperatures tend to average 27 °C throughout the year, we recommend visiting between May to August for optimal tropical conditions without the holiday crowds."],
+         "context_set": ""
+        },
+        {"tag": "illegal_faq",
+         "patterns": ["What are drinking, smoking and drug laws in Bali?", "What are Bali's rules on alcohol, drugs, and smoking?", "What are the laws in Bali regarding drinking, smoking, and drugs?", "What Bali's regulations are regarding drugs, alcohol, and smoking?", "are drinking, smoking and drug forbidden?", "Are drugs, alcohol, and smoking prohibited?", "Alcohol, tobacco, and illicit drugs are prohibited?", "Is it illegal to drink, smoke, or use drugs?", "Is it unlawful to drink, smoke, or use drugs?", "Are using drugs, smoking, and drinking prohibited?"],
+         "responses": ["Smoking or selling cigarettes and tobacco in public places like tourist attractions, hospitals, temples, and public transport is strictly prohibited. Smoking zones have been set up in public places where smokers can freely smoke. The legal drinking age in Bali is 21 years. You will not find any Halaal restaurant selling liquor because of the Muslim customs. Drug laws in Bali are very strict. You will be harshly penalized if you get caught with any kind of narcotics like cocaine, marijuana, and heroin."],
+         "context_set": ""
+        },
+        {"tag": "casino_faq",
+         "patterns": ["Does Bali have a casino?", "Is there a casino in Bali?", "A casino might be found in Bali."],
+         "responses": ["No, Bali does not have a casino. There are no sanctioned casinos or poker rooms in Bali. In fact, the activities of gambling and betting are illegal in Bali as it is against their religious principles."],
+         "context_set": ""
+        },
+        {"tag": "non-swimmer_faq",
+         "patterns": ["Can a non-swimmer do various water-related activities in Bali?", "Can a non-swimmer participate in a variety of water sports in Bali?", "Can someone who cannot swim engage in a variety of water sports in Bali?", "Can someone who cannot swim play in a number of different water sports in Bali?"],
+         "responses": ["Yes, sea-walking, jet-skiing, and river rafting are some of the water-related activities which do not require any prior experience in swimming or diving."],
+         "context_set": ""
+        },
+        {"tag": "seawalking_faq",
+         "patterns": ["Where can I do Sea Walking in Bali?", "How much will it cost me to do Sea Walking in Bali?", "Where in Bali can I go sea walking?", "What places in Bali offer sea walking?", "In what locations in Bali may I go sea walking?", "Can you tell me how much sea walking in Bali will cost?", "How much will sea walking cost me in Bali?"],
+         "responses": ["Sanur in Bali provides you a few of the most wonderful sites where you can walk right through the bottom of the ocean and experience colorful sea life. It is an ideal activity for both children and adults alike. No prior experience in swimming or diving is required."],
          "context_set": ""
         },
         {"tag": "just_talk",

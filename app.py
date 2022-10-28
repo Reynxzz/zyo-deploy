@@ -338,11 +338,7 @@ def getResponse(ints, intents_json):
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
         if(i['tag']== tag):
-            if tag == 'bestressort_faq':
-                recommend_hotels()
-                result = ""
-                break
-            elif tag == 'besthotel_faq':
+            if tag == 'besthotel_faq':
                 recommend_hotels()
                 result = ""
                 break
@@ -367,16 +363,26 @@ st.title("Zyo: Solo Travel Like a Pro!")
 
 st.markdown("Zyo is a chatbot that will guide you to explore Indonesia, even if you are alone!")
 st.image("assets/ZyoLanding.png")
-message = st.text_input("You can ask me anything about Bali, or just share your feelings with me!")
+message = st.text_input("You can ask me anything about Bali, or just share your feelings with me!", placeholder="What language do they speak? or How about food price?", value="Hello")
 
+try:
+    ints = predict_class(message, model)
+    res = getResponse(ints,intents)
+    if res != "":
+        st.success("Zyo: {}".format(res))
+except:
+    st.warning("Zyo: I'm sorry, I can't understand you")
+    st.write("Do you mind to fill the form below to improve my knowledge?")
+    with st.form("feedback_form"):
+        st.text_input("Your intent/topic that you want to know")
+        st.text_input("What kind of speech do you usually say when you have that intention?")
 
-ints = predict_class(message, model)
-res = getResponse(ints,intents)
-if res != "":
-    st.success("Zyo: {}".format(res))
+        submitted = st.form_submit_button("Submit")
+        if submitted:
+            st.write("Thank you for helping me to improve Zyo")
 
 st.markdown('<div style="text-align: justify; font-size: 10pt"><b>Tips:</b> Dont know anything about Bali? you can ask FAQ question to Zyo! try: "How is the weather in Bali" or "What language do they speak?"</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;></div>', unsafe_allow_html=True)
 
-if st.button('Feel stuck? More tips'):
+if st.button('Feel stuck? I have some tips'):
     st.image('assets/tutorial.png')

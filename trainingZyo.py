@@ -14,7 +14,7 @@ words = []
 labels = []
 documents = []
 ignore_words = ['?', '!', '-', ',', '.']
-data_file = open('intentsZyoLarge.json').read()
+data_file = open('intents/intentsZyoLarge.json').read()
 intents = json.loads(data_file)
 for intent in intents['intents']:
     for pattern in intent['patterns']:
